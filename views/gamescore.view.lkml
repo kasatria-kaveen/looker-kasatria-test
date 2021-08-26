@@ -35,7 +35,6 @@ view: gamescore {
     type: sum
     label: "Points"
     sql: ${TABLE}.score ;;
-    drill_fields: [user_details*]
   }
 
   measure: wins {
@@ -44,8 +43,5 @@ view: gamescore {
     filters: [score: ">0"]
   }
 
-  set: user_details {
-    fields: [games.date, games.arena_name, games.time_elapsed, starter.first_name, winner.first_name]
-  }
 
 }
