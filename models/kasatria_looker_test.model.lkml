@@ -46,7 +46,11 @@ explore: games {
 }
 
 explore: gamescore {
-
+  join: games {
+    type: left_outer
+    sql_on: ${gamescore.game_id}  = ${games.game_id} ;;
+    relationship: many_to_one
+  }
 
 }
 
