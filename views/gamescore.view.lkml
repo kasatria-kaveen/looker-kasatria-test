@@ -23,7 +23,6 @@ view: gamescore {
   dimension: score {
     type: number
     sql: ${TABLE}.Score ;;
-    drill_fields: [user_details*]
   }
 
   measure: games {
@@ -36,6 +35,7 @@ view: gamescore {
     type: sum
     label: "Points"
     sql: ${TABLE}.score ;;
+    drill_fields: [user_details*]
   }
 
   measure: wins {
