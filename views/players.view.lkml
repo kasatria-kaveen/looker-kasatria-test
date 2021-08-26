@@ -22,6 +22,7 @@ view: players {
   dimension: name {
     type: string
     sql: ${TABLE}.Name ;;
+    drill_fields: [player_id, name,nationalities.country, nationalities.flag]
   }
 
   dimension: nationality {
