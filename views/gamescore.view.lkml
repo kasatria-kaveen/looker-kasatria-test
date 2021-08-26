@@ -23,6 +23,7 @@ view: gamescore {
   dimension: score {
     type: number
     sql: ${TABLE}.Score ;;
+    drill_fields: [user_details*]
   }
 
   measure: games {
@@ -42,4 +43,9 @@ view: gamescore {
     label: "Wins"
     filters: [score: ">0"]
   }
+
+  set: user_details {
+    fields: [games.date, games.arena, games.time_elapsed, games.starter, games.winner]
+  }
+
 }
