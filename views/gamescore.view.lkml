@@ -45,7 +45,7 @@ view: gamescore {
   }
 
   set: user_details {
-    fields: [games.date, games.arena, games.time_elapsed, games.starter, games.winner]
+    fields: [games.date, games.arena.arena_name, games.time_elapsed, games.starter.first_name, games.winner.first_name]
   }
 
 }
