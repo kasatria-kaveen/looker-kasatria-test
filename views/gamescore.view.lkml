@@ -43,5 +43,9 @@ view: gamescore {
     filters: [score: ">0"]
   }
 
+  measure: cumulative_points {
+    type: running_total
+    sql: ${points} ;;
+  }
 
 }
