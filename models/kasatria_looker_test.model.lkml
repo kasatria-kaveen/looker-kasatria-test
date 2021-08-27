@@ -58,6 +58,20 @@ explore: gamescore {
     relationship: many_to_one
   }
 
+  join: starter {
+    # // from: players
+    type: left_outer
+    sql_on:${games.starter} = ${starter.player_id}  ;;
+    relationship: one_to_one
+  }
+
+  join: winner {
+    #   from: players
+    type: left_outer
+    sql_on:${games.winner} = ${winner.player_id}  ;;
+    relationship: one_to_one
+  }
+
 }
 
 explore: nationalities {
