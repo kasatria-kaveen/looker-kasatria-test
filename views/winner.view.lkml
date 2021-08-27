@@ -1,5 +1,6 @@
 view: winner {
-
+  sql_table_name: `satu.players`
+  ;;
   dimension: player_id {
     primary_key: yes
     type: string
