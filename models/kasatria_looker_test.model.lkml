@@ -52,6 +52,12 @@ explore: gamescore {
     relationship: many_to_one
   }
 
+  join: players {
+    type: left_outer
+    sql_on: ${gamescore.player_id}  = ${players.player_id} ;;
+    relationship: many_to_one
+  }
+
 }
 
 explore: nationalities {
