@@ -28,7 +28,7 @@ view: gamescore {
   measure: games {
     type: count
     label: "Games Played"
-    drill_fields: [games.game_id, winner.name]
+    drill_fields: [games.game_id, games.winner]
   }
 
   measure: points {
