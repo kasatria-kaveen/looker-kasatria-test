@@ -75,6 +75,12 @@ explore: gamescore {
 }
 
 explore: nationalities {
+  join: nations {
+    # // from: players
+    type: left_outer
+    sql_on:${nationalities.nationality_id} = ${nations.country_code}  ;;
+    relationship: one_to_one
+  }
 
 }
 
