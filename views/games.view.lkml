@@ -44,6 +44,11 @@ view: games {
     sql: ${TABLE}.Winner ;;
   }
 
+  dimension: season {
+    type: number
+    sql: ${TABLE}.Season ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [game_id, gamescore.count]
